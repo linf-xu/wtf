@@ -256,23 +256,23 @@ to {top:0;opacity: 1}
     background-position: 50% 50%;
 }
 .item1{
-    background-image:url('../img/ad1.jpg');
+    background-image:url('../img/adimg1.jpg');
 }
 .item2{
-    background-image:url('../img/ad2.jpg');
+    background-image:url('../img/adimg2.jpg');
 }
 .item3{
-    background-image:url('../img/ad3.jpg');
+    background-image:url('../img/adimg3.jpg');
 }
 .item3{
-    background-image:url('../img/ad3.jpg');
+    background-image:url('../img/adimg3.jpg');
 }
-/*.item4{
-    background-image:url('../img/ad4.jpg');
+.item4{
+    background-image:url('../img/adimg4.jpg');
 }
 .item5{
-    background-image:url('../img/ad5.jpg');
-}*/
+    background-image:url('../img/adimg5.jpg');
+}
 .tips{
     float: right;
     display: inline-block;
