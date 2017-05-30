@@ -3,10 +3,18 @@ body{
     background-repeat: no-repeat;
     position: fixed;
     top: 0;
-    left: 
-    width: 100%;
-    height: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*width: 100%;
+    height: 100%;*/
     background-image: url('../img/bg.jpg');
+    overflow: hidden;
+}
+#bodyInner{
+    position: absolute;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 .boxWrap{
@@ -19,11 +27,12 @@ body{
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     text-align: center;
-    overflow: auto;
+    overflow: hidden;
     border: 2px solid #ccc;
     -webkit-box-shadow: 3px 3px 3px;
     -moz-box-shadow: 3px 3px 3px;
     box-shadow: 3px 3px 3px;
+    z-index: 9;
 }
 .top{
     height: 75px;
@@ -97,4 +106,238 @@ body{
     margin-right:10px;
     background: rgb(132,18,18);
     
+}
+.leftText{
+    width: 50%;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    padding: 0 5px;
+}
+.rightText{
+background: #fff;
+    width: 50%;
+    padding: 0 5px;
+}
+.text{
+    display:flex;
+    display: -webkit-flex;
+    padding: 5px 10px;
+    text-align: left;
+}
+.text p{
+    text-indent: 2em;
+    word-wrap:break-word; word-break:normal; 
+}
+.twoBtn button{
+        vertical-align: text-top;
+    font-weight: bold;
+    line-height: 12px;
+    padding: 0;
+    height: 20px;
+    width: 80px;
+    margin: 5px 30px 10px 30px;
+}
+.set{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.setbox{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+}
+.setbox.active{
+    display: block;
+    animation: myfirst 1s;
+    -moz-animation: myfirst 1s; /* Firefox */
+    -webkit-animation: myfirst 1s;  /* Safari 和 Chrome */
+    -o-animation: myfirst 1s;
+}
+.setbox.noactive{
+    animation: myfirst 1s;
+    -moz-animation: myfirst 1s; /* Firefox */
+    -webkit-animation: myfirst 1s;  /* Safari 和 Chrome */
+    -o-animation: myfirst 1s;
+}
+.setbox>div{
+    display:flex;
+    display: -webkit-flex;
+}
+.setbox p{
+    text-align: center;
+}
+.setbox textarea{
+    width: 95%;
+    border:1px solid #ccc;
+    border-radius: 4px; 
+    text-indent: 2em;
+}
+@keyframes myfirst
+{
+from {top:-100px;opacity: 0}
+to {top:0;opacity: 1}
+}
+
+@-moz-keyframes myfirst 
+{
+from {top:-100px;opacity: 0}
+to {top:0;opacity: 1}
+}
+
+@-webkit-keyframes myfirst 
+{
+from {top:-100px;opacity: 0}
+to {top:0;opacity: 1}
+}
+
+@-o-keyframes myfirst 
+{
+from {top:-100px;opacity: 0}
+to {top:0;opacity: 1}
+}
+.email{
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 5px;
+    height: 20px;
+}
+.save{
+    width: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#ad{
+    width: 100%;
+    position: relative;
+    height: 100px;
+    border-top: 2px solid #ccc;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+.adwrap{
+    width: 200%;
+    height: 100%;
+    display: inline-block;
+}
+.adLeft{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.adLeftInner{
+    width: 100%;
+    height: 500%;
+    position: absolute;
+    animation: lunbo 20s linear 4s infinite alternate;
+    /* Firefox: */
+    -moz-animation: lunbo 20s linear 4s infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: lunbo 20s linear 4s infinite alternate;
+    /* Opera: */
+    -o-animation: lunbo 20s linear 4s infinite alternate;
+}
+.item{
+    width: 100%;
+    height: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.item1{
+    background-image:url('../img/ad1.jpg');
+}
+.item2{
+    background-image:url('../img/ad2.jpg');
+}
+.item3{
+    background-image:url('../img/ad3.jpg');
+}
+.item3{
+    background-image:url('../img/ad3.jpg');
+}
+/*.item4{
+    background-image:url('../img/ad4.jpg');
+}
+.item5{
+    background-image:url('../img/ad5.jpg');
+}*/
+.tips{
+    float: right;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.adP{
+    position: absolute;
+    color: yellow;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+}
+@keyframes lunbo
+{
+0%   { top:0;}
+10%  {  top:0;}
+15%  {  top:-100%;}
+35%  {  top:-100%;}
+40%  { top:-200%;}
+60%  { top:-200%;}
+65%  {  top:-300%;}
+85%  {  top:-300%;}
+90%  {  top:-400%;}
+100%  {  top:-400%;}
+}
+
+@-moz-keyframes lunbo 
+{
+0%   { top:0;}
+10%  {  top:0;}
+15%  {  top:-100%;}
+35%  {  top:-100%;}
+40%  { top:-200%;}
+60%  { top:-200%;}
+65%  {  top:-300%;}
+85%  {  top:-300%;}
+90%  {  top:-400%;}
+100%  {  top:-400%;}
+}
+
+@-webkit-keyframes lunbo 
+{
+0%   { top:0;}
+10%  {  top:0;}
+15%  {  top:-100%;}
+35%  {  top:-100%;}
+40%  { top:-200%;}
+60%  { top:-200%;}
+65%  {  top:-300%;}
+85%  {  top:-300%;}
+90%  {  top:-400%;}
+100%  {  top:-400%;}
+}
+
+@-o-keyframes lunbo 
+{
+0%   { top:0;}
+10%  {  top:0;}
+15%  {  top:-100%;}
+35%  {  top:-100%;}
+40%  { top:-200%;}
+60%  { top:-200%;}
+65%  {  top:-300%;}
+85%  {  top:-300%;}
+90%  {  top:-400%;}
+100%  {  top:-400%;}
 }
