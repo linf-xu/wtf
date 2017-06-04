@@ -8,7 +8,7 @@ body{
     right: 0;
     /*width: 100%;
     height: 100%;*/
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/bg.png');
     overflow: hidden;
 }
 #bodyInner{
@@ -143,29 +143,24 @@ background: #fff;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100;
 }
 .setbox{
     position: fixed;
+    top: -100px;
+    opacity: 0;
     width: 100%;
     background: #fff;
     z-index: 99;
     padding: 10px;
     box-sizing: border-box;
-    display: none;
+    display: block;
+    -webkit-transition: top .5s,opacity .5s;
+    transition: top .5s,opacity .5s; 
 }
 .setbox.active{
-    display: block;
-    animation: myfirst 1s;
-    -moz-animation: myfirst 1s; /* Firefox */
-    -webkit-animation: myfirst 1s;  /* Safari 和 Chrome */
-    -o-animation: myfirst 1s;
-}
-.setbox.noactive{
-    animation: myfirst 1s;
-    -moz-animation: myfirst 1s; /* Firefox */
-    -webkit-animation: myfirst 1s;  /* Safari 和 Chrome */
-    -o-animation: myfirst 1s;
+    top: 0;
+    opacity: 1;
 }
 .setbox>div{
     display:flex;
@@ -179,29 +174,6 @@ background: #fff;
     border:1px solid #ccc;
     border-radius: 4px; 
     text-indent: 2em;
-}
-@keyframes myfirst
-{
-from {top:-100px;opacity: 0}
-to {top:0;opacity: 1}
-}
-
-@-moz-keyframes myfirst 
-{
-from {top:-100px;opacity: 0}
-to {top:0;opacity: 1}
-}
-
-@-webkit-keyframes myfirst 
-{
-from {top:-100px;opacity: 0}
-to {top:0;opacity: 1}
-}
-
-@-o-keyframes myfirst 
-{
-from {top:-100px;opacity: 0}
-to {top:0;opacity: 1}
 }
 .email{
     margin-left: 10px;
@@ -220,14 +192,21 @@ to {top:0;opacity: 1}
     position: relative;
     height: 100px;
     border-top: 2px solid #ccc;
-    overflow-x: auto;
-    overflow-y: hidden;
+    
+    overflow: hidden;
     box-sizing: border-box;
 }
 .adwrap{
     width: 200%;
     height: 100%;
     display: inline-block;
+    position: absolute;
+    left: 0;
+    -webkit-transition: left .5s;
+    transition: left .5s;
+}
+.adwrap.swipeleft{
+    left: -100%;
 }
 .adLeft{
     display: inline-block;
@@ -278,6 +257,8 @@ to {top:0;opacity: 1}
     display: inline-block;
     width: 50%;
     height: 100%;
+    background: #5cb85c;
+    color: #fff;
 }
 .adP{
     position: absolute;
@@ -285,6 +266,7 @@ to {top:0;opacity: 1}
     display: inline-block;
     bottom: 0;
     right: 0;
+    z-index: 99;
 }
 @keyframes lunbo
 {

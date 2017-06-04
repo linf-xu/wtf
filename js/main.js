@@ -78,6 +78,7 @@ $(function(){
             }
             leftPresen=parseInt(second_time/(3*24*36));
             $('.timeLeft').text(time);
+            if(leftPresen<=98) leftPresen=2;
             $('.leftpW').css('height',100-leftPresen+'%');
             second_time--;
         }
@@ -101,6 +102,14 @@ $(function(){
             $('#lan').change(function(){
                 lang=$('#lan').val();
                 changeLang();
+            })
+            touch.on("#ad","swipeleft",function(){
+                $('.adwrap').addClass('swipeleft');
+                $('.adP').hide();
+            })
+            touch.on("#ad","swiperight",function(){
+                $('.adwrap').removeClass('swipeleft');
+                $('.adP').show();
             })
         }
         function transThis(){
@@ -141,6 +150,14 @@ $(function(){
             }
         }
         $('.buttons button').on('click',copyBox);
+        touch.on("#ad","swipeleft",function(){
+            $('.adwrap').addClass('swipeleft');
+            $('.adP').hide();
+        })
+        touch.on("#ad","swiperight",function(){
+            $('.adwrap').removeClass('swipeleft');
+            $('.adP').show();
+        })
         $('.twoBtn .trans').on('click',transThis);
         $('.twoBtn .clear').on('click',clearThis);
         $('#lan').change(function(){

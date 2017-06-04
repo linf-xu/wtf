@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/zepto.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pinyin.js"></script>
+    <script src="js/fade.js"></script>
+    <script src="js/touch.js"></script>
+    <!-- <script src="js/vconsole.min.js"></script> -->
+    <title>bitcoin</title>
+</head>
+<body>
+<div id="bodyInner">
+    <audio id="jinggao" src="media/deng.wav"></audio>
+    <span class="set" onclick="$('.setbox').addClass('active')"></span>
+    <div class="setbox">
+    <p style="border-bottom: 1px solid #ccc; margin-bottom: 5px">自定义设置</p>
+        <div>
+            <div class="setLeftWrap">
+                <p>我的微信怎么了(最多60字)</p>
+                <textarea name="" id="setLeft" cols="30" rows="4"></textarea>
+            </div>
+            <div class="setRightWrap">
+                 <p>怎样才能恢复(最多60字)</p>
+                <textarea name="" id="setRight" cols="30" rows="4" style="margin-left: 5%"></textarea>
+            </div>
+        </div>
+        <p style="display: flex;display: -webkit-flex;justify-content: space-between;"><a><span>你的邮箱:</span><input type="text" class="email"></a><span class="save">保存</span></p>
+        <!-- <p><button>保存</button></p> -->
+    </div>
+    <div class="boxWrap">
+        <div class="header">
+            <img class="icon" src="img/exe.gif">
+            Wana DecryptOr 2.0
+            <div class="buttons">
+                <button>X</button>
+            </div>
+        </div>
+        <div class="top">
+            <div class="left">
+
+            </div>
+            <div class="right" style="color: #fff">
+                <p style="color: rgb(224,224,0);">Your files will be lost on</p>
+                <p class="date"><span class="year"></span></p>
+                <!-- <p>Time Left1</p> -->
+                <div class="timeLeft"></div>
+                <div class="leftp"></div>
+                <div class="leftpW"></div>
+            </div>
+
+        </div>
+        <section>
+            <h2 style="color: #fff;margin: 5px 0;">Ooops,your wechat have been encrypted!
+                <select name="lan" id="lan">
+                    <option value="cn">中文简体
+                    </option>
+                    <option value="en">English</option>
+                </select>
+            </h2>
+        </section>
+        <section class="text" >
+            <div class="leftText">
+                <h2>我的微信怎么了?</h2>
+                <p>
+                    您的微信被我加密了.因此无法打开,无法登陆也无法使用像摇一摇,漂流瓶,附近的人等重要功能.
+                </p>
+            </div>
+            <div class="rightText">
+                <h2>怎样才能恢复?</h2>
+                <p>
+                    请在三天内支付30万欢乐豆外加一个瑞文兔女郎皮肤.我以我同桌王二蛋的人格担保,能提供安全有效的恢复服务.
+                </p>
+            </div>
+        </section>
+        <div class="twoBtn">
+            <button class="trans">一键传播</button><button class="clear">一键破解</button>
+        </div>
+        <div id="ad">
+        <p class="adP">黄金广告位招租<br/>2668350835@qq.com</p>
+            <div class="adwrap">
+                <div class="adLeft">
+                    <div class="adLeftInner">
+                        <div class="item item1"></div>
+                        <div class="item item2"></div>
+                        <div class="item item3"></div>
+                        <div class="item item4"></div>
+                        <div class="item item5"></div>
+                    </div>
+                </div>
+                <div class="tips">
+                    <h2>重要提示</h2>
+                    <p style="padding: 0 5px">此软件只是一个恶搞软件，并不会真的加密你的微信，如果对你造成困扰，<a href="http://smartii.cn/qqqq">点此了解更多</a>或者联系我：</p>
+                    <p>微博：http://weibo.com/linf9527</p>
+                    <p>邮箱：2668350835@qq.com</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>
